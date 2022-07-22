@@ -1,0 +1,15 @@
+@use 'variables';
+@use 'utility';
+
+body {
+  grid-template: "header" .5fr 
+                 "main" 1fr
+                 "social-icons" .5fr; 
+  background-color: variables.$clr-primary0;
+  background-image: variables.$mobile-bg;
+}
+
+.connect-on-social-media img {
+  inline-size: 2rem;
+  aspect-ratio: 1;
+}

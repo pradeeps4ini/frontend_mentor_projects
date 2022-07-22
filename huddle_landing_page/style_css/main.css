@@ -1,0 +1,20 @@
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+  grid-template: "header" 0.5fr "main" 1fr "social-icons" 0.5fr;
+  background-color: hsl(257deg, 40%, 49%);
+  background-image: url("../images/bg-mobile.svg");
+}
+
+.connect-on-social-media img {
+  inline-size: 2rem;
+  aspect-ratio: 1;
+}
+
+/*# sourceMappingURL=main.css.map */
