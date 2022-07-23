@@ -1,15 +1,25 @@
 @use 'variables';
+@use 'generalStyle';
 @use 'utility';
+@use 'composition';
 
 body {
-  grid-template: "header" .5fr 
-                 "main" 1fr
-                 "social-icons" .5fr; 
   background-color: variables.$clr-primary0;
   background-image: variables.$mobile-bg;
+}
+
+header {
+  max-inline-size: clamp(8.75rem, calc(40vw + 10px), 14.40rem);
 }
 
 .connect-on-social-media img {
   inline-size: 2rem;
   aspect-ratio: 1;
+}
+
+
+@media (min-width: 750px) {
+  body {
+    background-image: variables.$desktop-bg;
+  }
 }

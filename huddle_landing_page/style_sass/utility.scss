@@ -1,7 +1,10 @@
-.grid {
-  display: grid;
+@use 'variables';
+
+.width-all {
+  max-inline-size: 100%;
 }
 
-.flex {
-  display: flex;
-}
+.margin-top {
+ margin-block-start: clamp(variables.$spacing1, calc(5vw + 8px), variables.$spacing6); 
+} 
+
