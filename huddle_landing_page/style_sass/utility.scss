@@ -5,7 +5,7 @@
 }
 
 .margin-top {
- margin-block-start: clamp(variables.$spacing1, calc(5vw + 8px), variables.$spacing6); 
+ margin-block-start: clamp(variables.$size1, calc(5vw + 8px), variables.$size6); 
 } 
 
 .fw-600 {
@@ -20,6 +20,17 @@
   color: variables.$clr-light;
 }
 
+.f-clr0 {
+  color: variables.$clr-primary0;
+}
+
+.fs-200 {
+  font-size: clamp(variables.$size0, calc(3% + 5px), variables.$size1);
+}
+
+.fs-300 {
+  font-size: clamp(variables.$size1, calc(5% + 5px), variables.$size4);
+}
 
 .bg-dark {
   background-color: variables.$clr-primary0;
@@ -32,4 +43,3 @@
 .t-center {
   text-align: center;
 }
-

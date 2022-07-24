@@ -1,0 +1,21 @@
+.register-btn {
+  $min-size0: .5rem;
+  $max-size0: 1.5rem;
+  $min-size1: 3rem;
+  $max-size1: 8rem;
+  $size2: .75rem;
+  max-inline-size: fit-content;
+  padding-inline: clamp($min-size1, calc(15vw + 1rem), $max-size1);
+  padding-block: clamp($min-size0, calc(2vw + 5px), $max-size0);
+  font-size: clamp($size2, calc(2vw + .5rem), $max-size0);
+  border: none;
+  border-radius: 6.25rem;
+}
+
+
+@media (min-width: 750px) {
+  .register-btn {
+    $max-size0: 1rem;
+    $max-size1: 5rem;
+  }
+}

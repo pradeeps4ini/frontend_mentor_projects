@@ -1,0 +1,22 @@
+@use "variables";
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+
+.flow > * + * {
+  margin-block-start: variables.$size4; 
+}
+
+.margin-inline {
+  margin-inline: clamp(1.8rem, calc(5vw + 1rem), 4rem);
+}
+
+.flow_card > * + * {
+  margin-block: clamp(.5rem, calc(3vw + .5rem), variables.$size-dynamic);
+}
