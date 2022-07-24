@@ -8,3 +8,28 @@
  margin-block-start: clamp(variables.$spacing1, calc(5vw + 8px), variables.$spacing6); 
 } 
 
+.fw-600 {
+  font-weight: variables.$f-weight600;
+}
+
+.fw-400 {
+  font-weight: variables.$f-weight400;
+}
+
+.f-clr-light {
+  color: variables.$clr-light;
+}
+
+
+.bg-dark {
+  background-color: variables.$clr-primary0;
+}
+
+.bg-light {
+  background-color: variables.$clr-light;
+}
+
+.t-center {
+  text-align: center;
+}
+

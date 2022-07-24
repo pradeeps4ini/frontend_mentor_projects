@@ -2,9 +2,9 @@
 @use 'generalStyle';
 @use 'utility';
 @use 'composition';
+@use 'button';
 
 body {
-  background-color: variables.$clr-primary0;
   background-image: variables.$mobile-bg;
 }
 
@@ -16,7 +16,6 @@ header {
   inline-size: 2rem;
   aspect-ratio: 1;
 }
-
 
 @media (min-width: 750px) {
   body {

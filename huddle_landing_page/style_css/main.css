@@ -66,6 +66,30 @@ select {
   margin-block-start: clamp(1.5rem, 5vw + 8px, 4rem);
 }
 
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.f-clr-light {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.bg-dark {
+  background-color: hsl(257deg, 40%, 49%);
+}
+
+.bg-light {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.t-center {
+  text-align: center;
+}
+
 .grid {
   display: grid;
 }
@@ -82,8 +106,19 @@ select {
   margin-inline: clamp(1.8rem, 5vw + 1rem, 4rem);
 }
 
+.flow_card > * + * {
+  margin-block: clamp(0.5rem, 3vw + 0.5rem, 1.5rem);
+}
+
+.register-btn {
+  max-inline-size: fit-content;
+  padding-inline: clamp(3rem, 15vw + 1rem, 8rem);
+  padding-block: clamp(0.5rem, 3vw + 5px, 1.5rem);
+  border: none;
+  border-radius: 6.25rem;
+}
+
 body {
-  background-color: hsl(257deg, 40%, 49%);
   background-image: url("../images/bg-mobile.svg");
 }
 
