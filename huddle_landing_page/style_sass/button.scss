@@ -1,21 +1,33 @@
+$clr-p0 : hsl(257, 40%, 49%);
+$clr-p1: hsl(300, 69%, 71%);
+$clr-light: hsl(0, 0, 100%);
+
 .register-btn {
-  $min-size0: .5rem;
-  $max-size0: 1.5rem;
-  $min-size1: 3rem;
-  $max-size1: 8rem;
-  $size2: .75rem;
   max-inline-size: fit-content;
-  padding-inline: clamp($min-size1, calc(15vw + 1rem), $max-size1);
-  padding-block: clamp($min-size0, calc(2vw + 5px), $max-size0);
-  font-size: clamp($size2, calc(2vw + .5rem), $max-size0);
+  padding-inline: clamp(3rem, calc(15vw + 1rem), 8rem);
+  padding-block: clamp(0.5rem, calc(2vw + 5px), 1.25rem);
+  font-size: clamp(.5rem, calc(2vw + .5rem), 1.25rem);
+  font-family: 'Poppins', sans-serif;
+  color: $clr-p0;
   border: none;
   border-radius: 6.25rem;
+  transition: color 400ms ease-in-out 50ms,
+              background-color 450ms ease-in-out 75ms,
+              box-shadow 500ms ease-in-out 100ms;
+}
+
+.register-btn:hover {
+  color: $clr-light;
+  background-color: $clr-p1;
+  box-shadow: 1px 1px 5px 1px $clr-p0,
+              -0.5px -0.5px 3px 1px $clr-p0; 
 }
 
 
 @media (min-width: 750px) {
   .register-btn {
-    $max-size0: 1rem;
-    $max-size1: 5rem;
+    padding-inline: clamp(3rem, calc(15vw + 1rem), 4rem);
+    padding-block: clamp(0.5rem, calc(1vw + 5px), 1rem); 
+    font-size: clamp(0.5rem, calc(1vw + .5rem), 1.25rem);
   }
 }
