@@ -48,8 +48,8 @@ Users should be able to:
 
 ### What I learned
 
-*** CUBE CSS methodology to write the CSS
-*** SASS preprocessor for CSS
+- CUBE CSS methodology to write the CSS
+- SASS preprocessor for CSS
 
 ## Author
 
