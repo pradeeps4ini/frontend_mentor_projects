@@ -42,6 +42,7 @@ button,
 textarea,
 select {
   font: inherit;
+  cursor: pointer;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -62,8 +63,24 @@ select {
   max-inline-size: 100%;
 }
 
+.height-all {
+  min-block-size: 100%;
+}
+
 .margin-top {
-  margin-block-start: clamp(1.5rem, 5vw + 8px, 4rem);
+  margin-block-start: clamp(1.5rem, 5vw + 8px, 2rem);
+}
+
+.pad-block {
+  padding-block: 1rem;
+}
+
+.ff0 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.ff1 {
+  font-family: "Poppins", sans-serif;
 }
 
 .fw-600 {
@@ -78,6 +95,14 @@ select {
   color: hsl(0deg, 0%, 100%);
 }
 
+.fp-clr0 {
+  color: hsl(257deg, 40%, 49%);
+}
+
+.fp-clr1 {
+  color: hsl(300deg, 69%, 71%);
+}
+
 .bg-dark {
   background-color: hsl(257deg, 40%, 49%);
 }
@@ -90,6 +115,11 @@ select {
   text-align: center;
 }
 
+@media (min-width: 750px) {
+  .margin-block-s {
+    margin-block-start: clamp(3rem, 8vw + 1.5rem, 5rem);
+  }
+}
 .grid {
   display: grid;
 }
@@ -98,42 +128,121 @@ select {
   display: flex;
 }
 
-.flow > * + * {
-  margin-block-start: 3rem;
-}
-
 .margin-inline {
-  margin-inline: clamp(1.8rem, 5vw + 1rem, 4rem);
+  margin-inline: clamp(1.8rem, 5vw + 1rem, 4.5rem);
 }
 
 .flow_card > * + * {
-  margin-block: clamp(0.5rem, 3vw + 0.5rem, 1.5rem);
+  margin-block-start: clamp(0.5rem, 3vw + 0.5rem, 2rem);
 }
 
+@media (max-width: 750px) {
+  .flow > * + * {
+    margin-block-start: clamp(3rem, 8vw + 1rem, 5rem);
+  }
+}
 .register-btn {
   max-inline-size: fit-content;
   padding-inline: clamp(3rem, 15vw + 1rem, 8rem);
-  padding-block: clamp(0.5rem, 3vw + 5px, 1.5rem);
+  padding-block: clamp(0.5rem, 2vw + 5px, 1.25rem);
+  font-size: clamp(0.5rem, 2vw + 0.5rem, 1.25rem);
+  font-family: "Poppins", sans-serif;
+  color: hsl(257deg, 40%, 49%);
   border: none;
   border-radius: 6.25rem;
+  transition: color 400ms ease-in-out 50ms, background-color 450ms ease-in-out 75ms, box-shadow 500ms ease-in-out 100ms;
+}
+
+.register-btn:hover {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(300deg, 69%, 71%);
+  box-shadow: 1px 1px 5px 1px hsl(257deg, 40%, 49%), -0.5px -0.5px 3px 1px hsl(257deg, 40%, 49%);
+}
+
+@media (min-width: 750px) {
+  .register-btn {
+    padding-inline: clamp(3rem, 15vw + 1rem, 4rem);
+    padding-block: clamp(0.5rem, 1vw + 5px, 1rem);
+    font-size: clamp(0.5rem, 1vw + 0.5rem, 1.25rem);
+  }
+}
+html {
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
+  min-block-size: 100%;
   background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
 }
 
 header {
-  max-inline-size: clamp(8.75rem, 40vw + 10px, 14.4rem);
+  max-inline-size: clamp(8.75rem, 40vw + 10px, 13rem);
+}
+header img {
+  transition: transform 300ms ease-in-out;
+}
+header img:hover {
+  transform: scale(1.05);
 }
 
-.connect-on-social-media img {
-  inline-size: 2rem;
+main {
+  text-align: center;
+}
+main .content h1 {
+  font-size: clamp(1.5rem, 5vw + 5px, 3rem);
+}
+main .content p {
+  font-size: clamp(1rem, 3vw + 5px, 1.5rem);
+}
+
+.connect-on-social-media {
+  justify-content: center;
+  gap: 1rem;
+}
+.connect-on-social-media svg {
+  inline-size: 2.5rem;
   aspect-ratio: 1;
+  padding: 0.5rem;
+  fill: hsl(0deg, 0%, 100%);
+  border: 2px solid hsl(0deg, 0%, 100%);
+  border-radius: 100%;
+  transition: fill 300ms ease-in-out 50ms, border 400ms ease-in-out 80ms;
+}
+.connect-on-social-media svg:hover {
+  fill: hsl(300deg, 69%, 71%);
+  border-color: hsl(300deg, 69%, 71%);
 }
 
 @media (min-width: 750px) {
   body {
+    display: grid;
+    grid-template: "header" 5rem "main" auto/1fr;
     background-image: url("../images/bg-desktop.svg");
+  }
+  main {
+    grid-area: main;
+    display: grid;
+    grid-template: 1fr auto/1.5fr 1fr;
+    gap: 3rem;
+    text-align: start;
+  }
+  main .mockup-img {
+    grid-area: 1/1/2/2;
+  }
+  main .content {
+    grid-area: 1/2/2/3;
+    align-self: center;
+  }
+  main .content h1 {
+    font-size: clamp(1.5rem, 2vw + 5px, 3rem);
+  }
+  main .content p {
+    font-size: 1rem;
+  }
+  main .connect-on-social-media {
+    grid-area: 2/1/3/3;
+    justify-self: end;
   }
 }
 
