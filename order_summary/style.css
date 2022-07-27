@@ -1,0 +1,188 @@
+:root {
+  --clr-neutral0: hsl(225, 100%, 94%);
+  --clr-accent0: hsl(245, 75%, 52%);
+  --clr-neutral1: hsl(225, 100%, 98%);
+  --clr-neutral2: hsl(224, 23%, 55%);
+  --clr-accent1: hsl(223, 47%, 23%);
+
+  --font-size: 62.5%;
+  --font-family: 'Red Hat Display', sans-serif;
+
+  --font-bold-s: 400;
+  --font-bold-m: 700;
+  --font-bold-l: 900;
+}
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Page styling  */
+
+html {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+}
+
+body {
+  background-image: url(./images/desktop.svg);
+  background-color: var(--clr-neutral0);
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+
+/* utility classes */
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+a, 
+button {
+  cursor: pointer;
+}
+
+:is(a, button, price img):hover {
+  opacity: .9;
+  transform: scale(1.1);
+}
+
+
+/* card  */
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  inline-size: clamp(30rem, calc(20vw + 5rem), 33rem);
+}
+
+.hero-image {
+  inline-size: 100%;
+}
+
+.hero-image img {
+  inline-size: 100%;
+  object-fit: cover;
+  border-radius: 1rem  1rem 0 0;
+}
+
+
+/* summary */
+
+.summary {
+  background-color: var(--clr-neutral1);
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.text,
+.plan {
+  padding-inline: 1.5rem;
+}
+
+.text h2,
+.text p {
+  text-align: center;
+
+}
+
+.text p {
+  color: var(--clr-neutral2);
+  margin-block: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.plan {
+  justify-content: space-between;
+  padding-block: 1.5rem;
+  background-color: var(--clr-neutral1);
+}
+
+.price {
+  gap: 1.5rem;
+}
+
+.price img {
+  inline-size: 30px;
+  block-size: 30px;  
+}
+
+.price div p:first-child {
+  font-weight: 900;
+  color: var(--clr-accent1);
+}
+
+.price div p:last-child {
+  color: var(--clr-neutral2);
+}
+
+.plan a {
+  align-self: center;
+  color: var(--clr-accent0);
+  font-weight: 700;
+}
+
+/* buttons  */
+
+.pay_btn {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: var(--clr-accent0);
+  color: var(--clr-neutral1);
+  box-shadow: 0 2px 10px -1px var(--clr-accent0);
+  border: none;
+  border-radius: 1rem;
+}
+
+.cancel_btn {
+  border: none;
+  inline-size: content-fit;
+  background: none;
+  color: var(--clr-neutral2);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* footer */
+
+.attribution { 
+  font-size: 11px; text-align: center; 
+  position: absolute;
+  bottom: 0;
+}
+    
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+
+/* media queries  */
+
+@media (max-width: 600px) {
+  body {
+    background-image: url(./images/mobile.svg);
+    background-repeat: no-repeat;
+  }  
+}

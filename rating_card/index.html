@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet"> 
+  <title>Interactive rating component</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex">
+  
+  <h1 class="sr-only">Rating Card</h1>
+
+  <main>
+    <section class="front flex f-col f-wrap">
+      <div class="content flex f-col f-wrap">
+        <button class="star-image"><img src="./images/icon-star.svg" alt=""></button>
+        <h2>How did we do?</h2>
+        <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering.</p>
+      </div>
+
+      <form action="#" class="rating flex f-col f-wrap">
+        <div class="rating-button flex">
+          <label for="rating5" class="rating5">5</label>
+          <input id="rating5" class="rating5" type="radio" name="rating-box" value="5">
+
+          <label for="rating4" class="rating4">4</label>
+          <input id="rating4" class="rating4" type="radio" name="rating-box" value="4">
+
+          <label for="rating3" class="rating3">3</label>
+          <input id="rating3" class="rating3" type="radio" name="rating-box" value="3">
+
+          <label for="rating2" class="rating2">2</label>
+          <input id="rating2" class="rating2" type="radio" name="rating-box" value="2">
+
+          <label for="rating1" class="rating1">1</label>
+          <input id="rating1" class="rating1" type="radio" name="rating-box" value="1">
+        </div>
+        <div>
+          <button type="button" class="submit-btn">SUBMIT</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="back flex f-col f-wrap scale-to-zero">
+      <div class="chosen-rating">
+        <img src="./images/illustration-thank-you.svg" alt="">
+        <p></p>
+      </div>        
+
+      <div class="thanks-msg">
+        <h2>Thank you!</h2>
+        <p>We appreciate you taking time to give a rating, if you need more support, don't hesitate to get in touch,</p>
+      </div>
+    </section>  
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/pradeeps4ini">Pradeep Saini</a>.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+$clr-primary0: hsl(12, 88%, 59%);
+$clr-primary1: hsl(228, 39%, 23%);
+$clr-neutral0: hsl(227, 12%, 61%);
+$clr-neutral1: hsl(233, 12%, 13%);
+$clr-neutral2: hsl(13, 100%, 96%);
+$clr-neutral3: hsl(0, 0%, 98%);
+
+$fs-primary: 16px;
+
+$f-family0: 'Be Vietnam Pro', sans-serif;
+
+$f-weight0: 400;
+$f-weight1: 500;
+$f-weight2: 700;
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
