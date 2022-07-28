@@ -1,0 +1,73 @@
+@use "variables";
+
+.grid {
+  display: grid;
+}
+
+.p-abs {
+  position: absolute;
+}
+
+.p-rel {
+  position: relative;
+}
+
+.t-right {
+  text-align: end;
+}
+
+.t-left {
+  text-align: start;
+}
+
+/* font-weight */
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+
+/* font-size */
+
+.fs-4 {
+  font-size: variables.$size4;
+}
+
+.fs-3 {
+  font-size: variables.$size3; 
+}
+
+
+/* colors */
+
+.tc-0 {
+  color: variables.$fc-text0;
+}
+
+.tc-1 {
+  color: variables.$fc-text1;
+}
+
+.tc-2 {
+  color: variables.$fc-text2;
+}
+
+.tc-3 {
+  color: variables.$fc-text3;
+}
+
+.tc-4 {
+  color: variables.$fc-text4; 
+}
+
+.tc-5 {
+  color: variables.$fc-text5;
+}

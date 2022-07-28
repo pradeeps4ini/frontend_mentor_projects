@@ -1,0 +1,42 @@
+/* colors used in text  */
+
+$fc-text0: hsl(276, 100%, 81%); /* pale Violet*/ 
+$fc-text1: hsl(276, 55%, 52%);  /* moderate Violet */ 
+$fc-text2: hsl(271, 15%, 43%);  /* desaturated dark Violet*/
+$fc-text3: hsl(206, 6%, 79%);   /* grayish Vlue */
+$fc-text4: hsl(271, 36%, 24%);  /* very dark desaturated Violet */
+$fc-text5: hsl(270, 7%, 64%);   /* dark grayish Violet */
+
+
+/* secondary colors */
+
+$fc-s0: hsl(0, 0%, 100%); /* White */
+$fc-s1: hsl(270, 7%, 64%); /* light grayish Violet */
+$fc-s2: hsl(271, 36%, 24%); /* very dark desaturated Violet */
+$fc-s3: hsl(289, 100%, 72%); /* very light Magenta */
+
+
+/* color used in gradients */
+$fc-grad0: hsl(293, 100%, 63%); /* light Magenta  */ 
+$fc-grad1: hsl(264, 100%, 61%); /* light Violet */
+
+/* font family and font weights */
+$f-family: 'Rubik', sans-serif;
+$fw-0: 400;
+$fw-1: 500;
+$fw-2: 700;
+
+
+/* spacing */
+
+$size0: 1rem;
+$size1: 1.5rem;
+$size2: 2rem;
+$size3: 2.5rem;
+$size4: 3rem;
+$size5: 3.5rem;
+$size6: 4rem;
+$size7: 4.5rem;
+$size8: 5rem;
+$size9: 5.5rem;
+$size10: 6rem;
