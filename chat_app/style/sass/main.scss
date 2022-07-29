@@ -1,0 +1,86 @@
+@use "general_style";
+@use "variables";
+@use "utility";
+
+
+body {
+  min-block-size: 100vh;
+  font-family: variables.$f-family;
+  background-color: variables.$fc-s0;
+}
+
+
+main {
+  grid-template: "chat-app content" 125vh / 1fr 1fr;
+  gap: variables.$size7;
+
+
+  .chat {
+    position: relative;
+  
+ 
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -35%;
+      inline-size: 100%;
+      block-size: 100%;
+      background-image: linear-gradient(variables.$fc-grad0, variables.$fc-grad1); 
+      border-radius: 0 0 50% 40%;
+    }  
+  }
+
+  .content {
+    align-self: center;
+
+    h2, p {
+      max-inline-size: 60%;
+    }
+  }
+}
+
+
+.chat-box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: variables.$stack1;
+  background-color: variables.$fc-s0;
+
+  &__header {
+    padding-inline: variables.$size0;
+    padding-block: variables.$size1 variables.$size1;  
+    background-image: linear-gradient(variables.$fc-grad0, variables.$fc-grad1);
+
+    .back-icon {
+      max-inline-size: variables.$size1;
+    }
+
+    .avatar {
+      max-inline-size: variables.$size1;
+      border: 1px solid variables.$fc-s0;
+    }
+
+    .options-icon {
+      max-inline-size: variables.$size1;
+      margin-inline: auto 0;
+    }
+  }
+
+  &__input {
+    .send-chat {
+      max-inline-size: variables.$size2;
+    }
+  }
+} 
+
+
+.dog-image > * {
+  max-inline-size: variables.$size5;
+}
+
+
+footer {
+  bottom: 0;
+}

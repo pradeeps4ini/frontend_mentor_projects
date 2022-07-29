@@ -75,8 +75,13 @@ select {
 /* light Violet */
 /* font family and font weights */
 /* spacing */
+/* z-indexes/css stack */
 .grid {
   display: grid;
+}
+
+.flex-row {
+  display: flex;
 }
 
 .p-abs {
@@ -142,6 +147,20 @@ select {
   color: hsl(270deg, 7%, 64%);
 }
 
+/* sizing */
+.size-ratio1 {
+  aspect-ratio: 1;
+}
+
+/* border radius */
+.br-100 {
+  border-radius: 100%;
+}
+
+.br-10 {
+  border-radius: 10%;
+}
+
 body {
   min-block-size: 100vh;
   font-family: "Rubik", sans-serif;
@@ -170,6 +189,37 @@ main .content {
 }
 main .content h2, main .content p {
   max-inline-size: 60%;
+}
+
+.chat-box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.chat-box__header {
+  padding-inline: 0.5rem;
+  padding-block: 1rem 1rem;
+  background-image: linear-gradient(hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+}
+.chat-box__header .back-icon {
+  max-inline-size: 1rem;
+}
+.chat-box__header .avatar {
+  max-inline-size: 1rem;
+  border: 1px solid hsl(0deg, 0%, 100%);
+}
+.chat-box__header .options-icon {
+  max-inline-size: 1rem;
+  margin-inline: auto 0;
+}
+.chat-box__input .send-chat {
+  max-inline-size: 1.5rem;
+}
+
+.dog-image > * {
+  max-inline-size: 3rem;
 }
 
 footer {

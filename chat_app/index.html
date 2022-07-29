@@ -15,6 +15,53 @@
 <body>
   <main class="grid">
     <section class="chat">
+      <div class="chat-box">
+      <div class="chat-box__header | flex-row">
+        <img class="size-ratio1 | back-icon" src="./images/less_than.svg" alt="">
+        <img class="size-ratio1 | br-100 | avatar" src="./images/avatar.jpg" alt="Samuel Green photo">
+        <div class="walker-details">
+          <h5>Samuel Green</h5>
+          <p>Available to Walk</p>
+        </div>
+        <img class="size-ratio1 | options-icon" src="./images/three_dots.svg" alt="">
+      </div>
+
+      <div class="chat-box__messages">
+        <div class="chat__walker">
+          <p class="">That sounds great. I'd be happy with that.</p>
+          <p>Could you send over some pictures of your dog, please?</p>
+        </div>
+        <div class="chat__user">
+          <div class="dog-image | flex-row">
+            <img class="size-ratio1 | br-10" src="./images/dog-image-1.jpg" alt="">
+            <img class="size-ratio1 | br-10" src="./images/dog-image-2.jpg" alt="">
+            <img class="size-ratio1 | br-10" src="./images/dog-image-3.jpg" alt="">
+          </div>
+          <p>Here are a few pictures. She's a happy girl.</p>
+          <p>Can you make it?</p>
+        </div>
+        <div class="chat__walker">
+          <p>She looks so happy! The time we discussed works. How long shall i take her out for?</p>
+          <form action="">
+            <label for="">
+              <input type="radio" name="price">
+              30 minute walk <span>$29</span>
+            </label>
+            <label for="">
+              <input type="radio" name="price">
+              1 hour walk <span>$49</span>
+            </label>
+          </form>
+        </div>
+      </div>
+
+      <div class="chat-box__input">
+        <label for="">
+          <input type="input" placeholder="Type a message">
+          <button class="br-100 | size-ratio1 | send-chat" type="button"><img class="size-ratio1|" src="./images/send_icon.svg" alt=""></button>
+        </label>
+      </div>
+      </div>
     </section>
     <section class="content">
       <h2 class="fs-3 | tc-4 | fw-500">Simple booking</h2>

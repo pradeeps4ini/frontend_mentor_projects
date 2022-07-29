@@ -4,6 +4,10 @@
   display: grid;
 }
 
+.flex-row {
+  display: flex;
+}
+
 .p-abs {
   position: absolute;
 }
@@ -38,11 +42,11 @@
 /* font-size */
 
 .fs-4 {
-  font-size: variables.$size4;
+  font-size: variables.$size5;
 }
 
 .fs-3 {
-  font-size: variables.$size3; 
+  font-size: variables.$size4; 
 }
 
 
@@ -70,4 +74,21 @@
 
 .tc-5 {
   color: variables.$fc-text5;
+}
+
+
+/* sizing */
+
+.size-ratio1 {
+  aspect-ratio: 1;
+}
+
+/* border radius */
+
+.br-100 {
+  border-radius: 100%;
+}
+
+.br-10 {
+  border-radius: 10%;
 }

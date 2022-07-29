@@ -29,14 +29,20 @@ $fw-2: 700;
 
 /* spacing */
 
-$size0: 1rem;
-$size1: 1.5rem;
-$size2: 2rem;
-$size3: 2.5rem;
-$size4: 3rem;
-$size5: 3.5rem;
-$size6: 4rem;
-$size7: 4.5rem;
-$size8: 5rem;
-$size9: 5.5rem;
-$size10: 6rem;
+$size0: .5rem;
+$size1: 1rem;
+$size2: 1.5rem;
+$size3: 2rem;
+$size4: 2.5rem;
+$size5: 3rem;
+$size6: 3.5rem;
+$size7: 4rem;
+$size8: 4.5rem;
+$size9: 5rem;
+$size10: 5.5rem;
+$size11: 6rem;
+
+
+/* z-indexes/css stack */
+
+$stack1: 1;
