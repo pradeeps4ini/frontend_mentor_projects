@@ -8,6 +8,10 @@
   display: flex;
 }
 
+.align-c {
+  align-items: center;
+}
+
 .p-abs {
   position: absolute;
 }
@@ -41,11 +45,15 @@
 
 /* font-size */
 
-.fs-4 {
+.fs-0 {
+  font-size: variables.$size0;
+}
+
+.fs-5 {
   font-size: variables.$size5;
 }
 
-.fs-3 {
+.fs-4 {
   font-size: variables.$size4; 
 }
 
@@ -76,11 +84,19 @@
   color: variables.$fc-text5;
 }
 
+.t-light {
+  color: variables.$fc-s0;
+}
+
 
 /* sizing */
 
 .size-ratio1 {
   aspect-ratio: 1;
+}
+
+.gap0 {
+  gap: variables.$size0;
 }
 
 /* border radius */
@@ -91,4 +107,18 @@
 
 .br-10 {
   border-radius: 10%;
+}
+
+/* padding and margin */
+
+.pd0 {
+  padding: variables.$size0;
+}
+
+.pd1 {
+  padding: variables.$size1;
+}
+
+.pd2 {
+  padding: variables.$size2;
 }

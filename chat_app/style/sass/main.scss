@@ -46,24 +46,45 @@ main {
   top: 0;
   left: 50%;
   z-index: variables.$stack1;
+  max-inline-size: 16rem;
+  margin-block-start: 20vh;
+  padding-inline: variables.$size0 ;
+  padding-block: variables.$size1 variables.$size0;
   background-color: variables.$fc-s0;
+  border-radius: 30px;
+  box-shadow: 1px 1px 1px 3px variables.$fc-s1,
+              1px 1px 1px 3px variables.$fc-s1;
 
   &__header {
-    padding-inline: variables.$size0;
-    padding-block: variables.$size1 variables.$size1;  
-    background-image: linear-gradient(variables.$fc-grad0, variables.$fc-grad1);
+    position: relative;
+    padding-inline: variables.$size1;
+    padding-block: variables.$size3 variables.$size0;  
+    background-image: linear-gradient(to left, variables.$fc-grad0 10%, variables.$fc-grad1);
+    border-radius: 25px 25px 10px 10px;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      inline-size: 60%;
+      block-size: calc(variables.$size1 + .25rem);
+      margin-inline: variables.$size3;
+      background-color: variables.$fc-s0;
+      border-radius: 0 0 15px 15px;
+    }
 
     .back-icon {
-      max-inline-size: variables.$size1;
+      max-inline-size: calc(variables.$size0 + .25rem);
     }
 
     .avatar {
-      max-inline-size: variables.$size1;
+      max-inline-size: variables.$size2;
+      block-size: variables.$size2;
       border: 1px solid variables.$fc-s0;
     }
 
     .options-icon {
-      max-inline-size: variables.$size1;
+      max-inline-size: calc(variables.$size0 + .25rem);
       margin-inline: auto 0;
     }
   }

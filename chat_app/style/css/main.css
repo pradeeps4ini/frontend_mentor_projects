@@ -84,6 +84,10 @@ select {
   display: flex;
 }
 
+.align-c {
+  align-items: center;
+}
+
 .p-abs {
   position: absolute;
 }
@@ -114,11 +118,15 @@ select {
 }
 
 /* font-size */
-.fs-4 {
+.fs-0 {
+  font-size: 0.5rem;
+}
+
+.fs-5 {
   font-size: 3rem;
 }
 
-.fs-3 {
+.fs-4 {
   font-size: 2.5rem;
 }
 
@@ -147,9 +155,17 @@ select {
   color: hsl(270deg, 7%, 64%);
 }
 
+.t-light {
+  color: hsl(0deg, 0%, 100%);
+}
+
 /* sizing */
 .size-ratio1 {
   aspect-ratio: 1;
+}
+
+.gap0 {
+  gap: 0.5rem;
 }
 
 /* border radius */
@@ -159,6 +175,19 @@ select {
 
 .br-10 {
   border-radius: 10%;
+}
+
+/* padding and margin */
+.pd0 {
+  padding: 0.5rem;
+}
+
+.pd1 {
+  padding: 1rem;
+}
+
+.pd2 {
+  padding: 1.5rem;
 }
 
 body {
@@ -196,22 +225,41 @@ main .content h2, main .content p {
   top: 0;
   left: 50%;
   z-index: 1;
+  max-inline-size: 16rem;
+  margin-block-start: 20vh;
+  padding-inline: 0.5rem;
+  padding-block: 1rem 0.5rem;
   background-color: hsl(0deg, 0%, 100%);
+  border-radius: 30px;
+  box-shadow: 1px 1px 1px 3px hsl(270deg, 7%, 64%), 1px 1px 1px 3px hsl(270deg, 7%, 64%);
 }
 .chat-box__header {
-  padding-inline: 0.5rem;
-  padding-block: 1rem 1rem;
-  background-image: linear-gradient(hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  position: relative;
+  padding-inline: 1rem;
+  padding-block: 2rem 0.5rem;
+  background-image: linear-gradient(to left, hsl(293deg, 100%, 63%) 10%, hsl(264deg, 100%, 61%));
+  border-radius: 25px 25px 10px 10px;
+}
+.chat-box__header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inline-size: 60%;
+  block-size: 1.25rem;
+  margin-inline: 2rem;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 0 0 15px 15px;
 }
 .chat-box__header .back-icon {
-  max-inline-size: 1rem;
+  max-inline-size: 0.75rem;
 }
 .chat-box__header .avatar {
-  max-inline-size: 1rem;
+  max-inline-size: 1.5rem;
+  block-size: 1.5rem;
   border: 1px solid hsl(0deg, 0%, 100%);
 }
 .chat-box__header .options-icon {
-  max-inline-size: 1rem;
+  max-inline-size: 0.75rem;
   margin-inline: auto 0;
 }
 .chat-box__input .send-chat {
