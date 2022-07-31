@@ -57,6 +57,9 @@
   font-size: variables.$size4; 
 }
 
+.fs-e1 {
+  font-size: variables.$size-e1;
+}
 
 /* colors */
 
@@ -86,6 +89,10 @@
 
 .t-light {
   color: variables.$fc-s0;
+}
+
+.bg-s1 {
+  background-color: variables.$fc-s1;
 }
 
 

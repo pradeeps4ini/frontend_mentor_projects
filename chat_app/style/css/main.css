@@ -130,6 +130,10 @@ select {
   font-size: 2.5rem;
 }
 
+.fs-e1 {
+  font-size: 0.75rem;
+}
+
 /* colors */
 .tc-0 {
   color: hsl(276deg, 100%, 81%);
@@ -157,6 +161,10 @@ select {
 
 .t-light {
   color: hsl(0deg, 0%, 100%);
+}
+
+.bg-s1 {
+  background-color: hsl(270deg, 20%, 96%);
 }
 
 /* sizing */
@@ -227,16 +235,17 @@ main .content h2, main .content p {
   z-index: 1;
   max-inline-size: 16rem;
   margin-block-start: 20vh;
-  padding-inline: 0.5rem;
-  padding-block: 1rem 0.5rem;
-  background-color: hsl(0deg, 0%, 100%);
+  border-inline: 0.5rem solid hsl(0deg, 0%, 100%);
+  border-block-start: 0.5rem solid hsl(0deg, 0%, 100%);
+  border-block-end: 0.5rem solid hsl(0deg, 0%, 100%);
   border-radius: 30px;
-  box-shadow: 1px 1px 1px 3px hsl(270deg, 7%, 64%), 1px 1px 1px 3px hsl(270deg, 7%, 64%);
+  box-shadow: 1px 1px 1px 3px hsl(270deg, 20%, 96%), 1px 1px 1px 3px hsl(270deg, 20%, 96%);
 }
 .chat-box__header {
   position: relative;
   padding-inline: 1rem;
   padding-block: 2rem 0.5rem;
+  margin-block-end: 0.75rem;
   background-image: linear-gradient(to left, hsl(293deg, 100%, 63%) 10%, hsl(264deg, 100%, 61%));
   border-radius: 25px 25px 10px 10px;
 }
@@ -262,12 +271,37 @@ main .content h2, main .content p {
   max-inline-size: 0.75rem;
   margin-inline: auto 0;
 }
+.chat-box__messages {
+  padding: 0.25rem 0.5rem;
+}
 .chat-box__input .send-chat {
   max-inline-size: 1.5rem;
 }
 
-.dog-image > * {
-  max-inline-size: 3rem;
+.chat-box__messages .chat__user, .chat-box__messages .chat__walker {
+  max-inline-size: 8.5rem;
+  margin-block-end: 1rem;
+}
+.chat-box__messages .chat__user p, .chat-box__messages .chat__walker p {
+  padding: 0.5rem;
+  margin-block-end: 0.5rem;
+}
+.chat-box__messages .chat__walker p {
+  color: hsl(276deg, 55%, 52%);
+  background-color: hsl(272deg, 40.5%, 92.7%);
+  border-radius: 10px 10px 10px 0;
+}
+.chat-box__messages .chat__user {
+  margin-inline: auto 0;
+}
+.chat-box__messages .chat__user p {
+  color: hsl(271deg, 15%, 43%);
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 10px 10px 0 10px;
+}
+.chat-box__messages .dog-image > * {
+  max-inline-size: 2.5rem;
+  margin-right: 0.5rem;
 }
 
 footer {

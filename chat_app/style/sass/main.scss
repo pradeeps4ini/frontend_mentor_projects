@@ -17,7 +17,6 @@ main {
 
   .chat {
     position: relative;
-  
  
     &::after {
       content: "";
@@ -48,9 +47,9 @@ main {
   z-index: variables.$stack1;
   max-inline-size: 16rem;
   margin-block-start: 20vh;
-  padding-inline: variables.$size0 ;
-  padding-block: variables.$size1 variables.$size0;
-  background-color: variables.$fc-s0;
+  border-inline: variables.$size0  solid variables.$fc-s0;
+  border-block-start: variables.$size0 solid variables.$fc-s0;
+  border-block-end: variables.$size0 solid variables.$fc-s0;
   border-radius: 30px;
   box-shadow: 1px 1px 1px 3px variables.$fc-s1,
               1px 1px 1px 3px variables.$fc-s1;
@@ -59,6 +58,7 @@ main {
     position: relative;
     padding-inline: variables.$size1;
     padding-block: variables.$size3 variables.$size0;  
+    margin-block-end: variables.$size-e1;
     background-image: linear-gradient(to left, variables.$fc-grad0 10%, variables.$fc-grad1);
     border-radius: 25px 25px 10px 10px;
     
@@ -88,6 +88,10 @@ main {
       margin-inline: auto 0;
     }
   }
+  
+  &__messages {
+    padding: calc(variables.$size0 - .25rem) variables.$size0;
+  }
 
   &__input {
     .send-chat {
@@ -97,8 +101,45 @@ main {
 } 
 
 
-.dog-image > * {
-  max-inline-size: variables.$size5;
+.chat-box__messages {
+  
+  %block-size {
+    max-inline-size: 8.5rem;
+    margin-block-end: variables.$size1;
+  }
+
+  %para {
+    padding: variables.$size0;
+    margin-block-end: variables.$size0;
+  } 
+
+  .chat__walker {
+    @extend %block-size;
+
+    p {
+      @extend %para;
+      color: variables.$fc-text1;
+      background-color: variables.$fc-s4; 
+      border-radius: 10px 10px 10px 0;
+    }
+  }
+
+  .chat__user {
+    @extend %block-size;
+    margin-inline: auto 0;
+
+    p {
+      @extend %para;
+      color: variables.$fc-text2;
+      background-color: variables.$fc-s0;
+      border-radius: 10px 10px 0 10px;
+    }
+  } 
+
+  .dog-image > * {
+    max-inline-size: variables.$size4;
+    margin-right: variables.$size0;
+  }
 }
 
 
