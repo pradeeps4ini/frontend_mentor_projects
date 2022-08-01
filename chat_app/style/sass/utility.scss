@@ -8,6 +8,11 @@
   display: flex;
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .align-c {
   align-items: center;
 }

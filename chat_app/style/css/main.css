@@ -84,6 +84,11 @@ select {
   display: flex;
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .align-c {
   align-items: center;
 }
@@ -218,7 +223,7 @@ main .chat::after {
   left: -35%;
   inline-size: 100%;
   block-size: 100%;
-  background-image: linear-gradient(hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  background-image: linear-gradient(to left, hsl(264deg, 100%, 61%), hsl(293deg, 100%, 63%));
   border-radius: 0 0 50% 40%;
 }
 main .content {
@@ -274,8 +279,25 @@ main .content h2, main .content p {
 .chat-box__messages {
   padding: 0.25rem 0.5rem;
 }
+.chat-box__input {
+  position: relative;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+.chat-box__input .input-message {
+  inline-size: 14rem;
+  color: hsl(206deg, 6%, 79%);
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 50px;
+}
 .chat-box__input .send-chat {
-  max-inline-size: 1.5rem;
+  position: absolute;
+  top: 23%;
+  right: 5%;
+  max-inline-size: 1.75rem;
+  border: none;
+  cursor: pointer;
 }
 
 .chat-box__messages .chat__user, .chat-box__messages .chat__walker {
@@ -287,6 +309,7 @@ main .content h2, main .content p {
   margin-block-end: 0.5rem;
 }
 .chat-box__messages .chat__walker p {
+  width: fit-content;
   color: hsl(276deg, 55%, 52%);
   background-color: hsl(272deg, 40.5%, 92.7%);
   border-radius: 10px 10px 10px 0;
@@ -295,6 +318,8 @@ main .content h2, main .content p {
   margin-inline: auto 0;
 }
 .chat-box__messages .chat__user p {
+  width: fit-content;
+  margin-inline: auto 0;
   color: hsl(271deg, 15%, 43%);
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 10px 10px 0 10px;
@@ -302,6 +327,20 @@ main .content h2, main .content p {
 .chat-box__messages .dog-image > * {
   max-inline-size: 2.5rem;
   margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-price label {
+  inline-size: 9rem;
+  padding: 0.5rem;
+  color: hsl(0deg, 0%, 100%);
+  background-image: linear-gradient(to right, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  border-radius: 10px 10px 10px 0;
+}
+.form-price label span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-inline: auto 0;
 }
 
 footer {

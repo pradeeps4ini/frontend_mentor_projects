@@ -25,7 +25,7 @@ main {
       left: -35%;
       inline-size: 100%;
       block-size: 100%;
-      background-image: linear-gradient(variables.$fc-grad0, variables.$fc-grad1); 
+      background-image: linear-gradient(to left, variables.$fc-grad1, variables.$fc-grad0); 
       border-radius: 0 0 50% 40%;
     }  
   }
@@ -94,8 +94,25 @@ main {
   }
 
   &__input {
+    position: relative; 
+    border-radius: 10px;
+    padding: variables.$size0; 
+
+    .input-message {
+      inline-size: 14rem;
+      color: variables.$fc-text3;
+      padding: variables.$size0 variables.$size0;
+      border: none;
+      border-radius: 50px;
+    }
+
     .send-chat {
-      max-inline-size: variables.$size2;
+      position: absolute;
+      top: 23%;
+      right: 5%;
+      max-inline-size: calc(variables.$size2 + .25rem);
+      border: none;
+      cursor: pointer;
     }
   }
 } 
@@ -118,6 +135,7 @@ main {
 
     p {
       @extend %para;
+      width: fit-content;
       color: variables.$fc-text1;
       background-color: variables.$fc-s4; 
       border-radius: 10px 10px 10px 0;
@@ -130,6 +148,8 @@ main {
 
     p {
       @extend %para;
+      width: fit-content;
+      margin-inline: auto 0;
       color: variables.$fc-text2;
       background-color: variables.$fc-s0;
       border-radius: 10px 10px 0 10px;
@@ -139,6 +159,21 @@ main {
   .dog-image > * {
     max-inline-size: variables.$size4;
     margin-right: variables.$size0;
+    margin-bottom: variables.$size0;
+  }
+}
+
+.form-price label {
+  inline-size: 9rem;
+  padding: variables.$size0;
+  color: variables.$fc-s0;
+  background-image: linear-gradient(to right, variables.$fc-grad0, variables.$fc-grad1);
+  border-radius: 10px 10px 10px 0;
+
+  span {
+    font-size: variables.$size-e1;
+    font-weight: variables.$fw-2;
+    margin-inline: auto 0;
   }
 }
 

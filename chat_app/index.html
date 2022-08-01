@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="./style/css/main.css">
 </head>
 <body>
-  <main class="grid">
+  <main class="bg-s1 | grid">
     <section class="chat">
       <div class=" bg-s1 | chat-box">
         <div class="| flex-row | gap0 | align-c | chat-box__header">
@@ -26,7 +26,7 @@
           <img class="size-ratio1 | options-icon" src="./images/three_dots.svg" alt="">
         </div>
 
-        <div class="fs-e1 | chat-box__messages">
+        <div class="fs-0 | chat-box__messages">
           <div class="chat__walker">
             <p class="">That sounds great. I'd be happy to discuss more.</p>
             <p>Could you send over some pictures of your dog, please?</p>
@@ -42,12 +42,12 @@
           </div>
           <div class="chat__walker">
             <p>She looks so happy! The time we discussed works. How long shall i take her out for?</p>
-            <form action="">
-              <label for="">
+            <form class="gap0 | flex-col | form-price" action="">
+              <label class="gap0 | align-c | flex-row" for="">
                 <input type="radio" name="price">
                 30 minute walk <span>$29</span>
               </label>
-              <label for="">
+              <label class="gap0 | align-c | flex-row" for="">
                 <input type="radio" name="price">
                 1 hour walk <span>$49</span>
               </label>
@@ -55,12 +55,12 @@
           </div>
         </div>
 
-      <div class="chat-box__input">
-        <label for="">
-          <input type="input" placeholder="Type a message">
+        <div class="flex-row | chat-box__input">
+          <label for="">
+            <input class="fs-e1 | input-message" type="input" placeholder="Type a message">
+          </label>
           <button class="br-100 | size-ratio1 | send-chat" type="button"><img class="size-ratio1|" src="./images/send_icon.svg" alt=""></button>
-        </label>
-      </div>
+        </div>
       </div>
     </section>
     <section class="content">
