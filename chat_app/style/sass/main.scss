@@ -12,11 +12,11 @@ body {
 
 main {
   grid-template: "chat-app content" 125vh / 1fr 1fr;
-  gap: variables.$size7;
 
 
   .chat {
     position: relative;
+    grid-area: chat-app;
  
     &::after {
       content: "";
@@ -26,12 +26,13 @@ main {
       inline-size: 100%;
       block-size: 100%;
       background-image: linear-gradient(to left, variables.$fc-grad1, variables.$fc-grad0); 
-      border-radius: 0 0 50% 40%;
+      border-radius: 0 0 50% 50%;
     }  
   }
 
   .content {
     align-self: center;
+    grid-area: content;
 
     h2, p {
       max-inline-size: 60%;
@@ -41,10 +42,10 @@ main {
 
 
 .chat-box {
-  position: absolute;
+  position: relative;
   top: 0;
-  left: 50%;
   z-index: variables.$stack1;
+  margin-inline: auto;
   max-inline-size: 16rem;
   block-size: 33.5rem;
   margin-block-start: 25vh;
@@ -61,7 +62,8 @@ main {
   }
 
   &__header {
-    position: relative;
+    position: sticky;
+    top: 0;
     padding-inline: variables.$size1;
     padding-block: variables.$size3 variables.$size0;  
     margin-block-end: variables.$size-e1;
@@ -100,7 +102,8 @@ main {
   }
 
   &__input {
-    position: relative; 
+    position: sticky;
+    bottom: 0; 
     border-radius: 10px;
     padding: variables.$size0; 
 
@@ -194,5 +197,14 @@ footer {
   p {
     inline-size: fit-content;
     margin-inline: auto;
+  }
+}
+
+
+/* media queries */
+
+@media (max-width: 900px) {
+  main {
+    grid-template: "chat-app" auto "content" auto / 1fr;
   }
 }

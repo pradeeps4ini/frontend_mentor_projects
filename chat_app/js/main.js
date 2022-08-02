@@ -36,6 +36,9 @@ const freelancerChat = function(chats, chatMessages) {
   div.classList.add("chat__walker");
   div.appendChild(p);
   chatMessages.appendChild(div);
+  div.scrollIntoView({top: div.scrollHeight,
+                      behavior: "smooth",
+                     });
 };
 
 
