@@ -239,12 +239,17 @@ main .content h2, main .content p {
   left: 50%;
   z-index: 1;
   max-inline-size: 16rem;
-  margin-block-start: 20vh;
-  border-inline: 0.5rem solid hsl(0deg, 0%, 100%);
-  border-block-start: 0.5rem solid hsl(0deg, 0%, 100%);
-  border-block-end: 0.5rem solid hsl(0deg, 0%, 100%);
+  block-size: 33.5rem;
+  margin-block-start: 25vh;
+  border: 0.5rem solid hsl(0deg, 0%, 100%);
   border-radius: 30px;
-  box-shadow: 1px 1px 1px 3px hsl(270deg, 20%, 96%), 1px 1px 1px 3px hsl(270deg, 20%, 96%);
+  box-shadow: 1px 1px 3px 1px hsl(270deg, 7%, 64%), 1px 1px 5px 1px hsl(270deg, 7%, 64%);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+.chat-box::-webkit-scrollbar {
+  display: none;
 }
 .chat-box__header {
   position: relative;
@@ -286,10 +291,13 @@ main .content h2, main .content p {
 }
 .chat-box__input .input-message {
   inline-size: 14rem;
-  color: hsl(206deg, 6%, 79%);
+  color: hsl(271deg, 15%, 43%);
   padding: 0.5rem 0.5rem;
   border: none;
   border-radius: 50px;
+}
+.chat-box__input .input-message:focus-within {
+  outline: 2px solid hsl(289deg, 100%, 72%);
 }
 .chat-box__input .send-chat {
   position: absolute;
@@ -345,6 +353,11 @@ main .content h2, main .content p {
 
 footer {
   bottom: 0;
+  margin-top: 3.5rem;
+}
+footer p {
+  inline-size: fit-content;
+  margin-inline: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

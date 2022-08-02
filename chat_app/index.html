@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style/css/main.css">
 </head>
-<body>
+<body class="bg-s1">
   <main class="bg-s1 | grid">
     <section class="chat">
       <div class=" bg-s1 | chat-box">
@@ -26,7 +26,7 @@
           <img class="size-ratio1 | options-icon" src="./images/three_dots.svg" alt="">
         </div>
 
-        <div class="fs-0 | chat-box__messages">
+        <div class="fs-0 | chat-box__messages" id="chat-box__messages">
           <div class="chat__walker">
             <p class="">That sounds great. I'd be happy to discuss more.</p>
             <p>Could you send over some pictures of your dog, please?</p>
@@ -57,9 +57,9 @@
 
         <div class="flex-row | chat-box__input">
           <label for="">
-            <input class="fs-e1 | input-message" type="input" placeholder="Type a message">
+            <input class="fs-e1 | input-message" id="input-message" type="input" placeholder="Type a message">
           </label>
-          <button class="br-100 | size-ratio1 | send-chat" type="button"><img class="size-ratio1|" src="./images/send_icon.svg" alt=""></button>
+          <button class="br-100 | size-ratio1 | send-chat" id="send-chat" type="button"><img class="size-ratio1|" src="./images/send_icon.svg" alt=""></button>
         </div>
       </div>
     </section>
@@ -72,8 +72,9 @@
   </main>
   
   <footer>
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.</p>
   </footer>
+  <script src="./js/main.js"></script>
 </body>
 </html>

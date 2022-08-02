@@ -46,13 +46,19 @@ main {
   left: 50%;
   z-index: variables.$stack1;
   max-inline-size: 16rem;
-  margin-block-start: 20vh;
-  border-inline: variables.$size0  solid variables.$fc-s0;
-  border-block-start: variables.$size0 solid variables.$fc-s0;
-  border-block-end: variables.$size0 solid variables.$fc-s0;
+  block-size: 33.5rem;
+  margin-block-start: 25vh;
+  border: variables.$size0  solid variables.$fc-s0;
   border-radius: 30px;
-  box-shadow: 1px 1px 1px 3px variables.$fc-s1,
-              1px 1px 1px 3px variables.$fc-s1;
+  box-shadow: 1px 1px 3px 1px variables.$fc-text5,
+              1px 1px 5px 1px variables.$fc-text5;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &__header {
     position: relative;
@@ -100,10 +106,14 @@ main {
 
     .input-message {
       inline-size: 14rem;
-      color: variables.$fc-text3;
+      color: variables.$fc-text2;
       padding: variables.$size0 variables.$size0;
       border: none;
       border-radius: 50px;
+
+      &:focus-within {
+        outline: 2px solid variables.$fc-s3; 
+      }
     }
 
     .send-chat {
@@ -180,4 +190,9 @@ main {
 
 footer {
   bottom: 0;
+  margin-top: variables.$size6;
+  p {
+    inline-size: fit-content;
+    margin-inline: auto;
+  }
 }
