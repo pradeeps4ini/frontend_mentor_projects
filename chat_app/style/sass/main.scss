@@ -9,6 +9,10 @@ body {
   background-color: variables.$fc-s0;
 }
 
+input,
+button {
+  accent-color: variables.$fc-s3;
+}
 
 /* mixin for the background */
 
@@ -119,10 +123,6 @@ main {
       padding: variables.$size0 variables.$size0;
       border: none;
       border-radius: 50px;
-
-      &:focus-within {
-        outline: 2px solid variables.$fc-s3; 
-      }
     }
 
     .send-chat {
@@ -134,8 +134,7 @@ main {
       cursor: pointer;
     }
   }
-} 
-
+}
 
 .chat-box__messages {
   
@@ -187,7 +186,20 @@ main {
   padding: variables.$size0;
   color: variables.$fc-s0;
   background-image: linear-gradient(to right, variables.$fc-grad0, variables.$fc-grad1);
+  border: none;
   border-radius: 10px 10px 10px 0;
+  
+  input {
+    appearance: none;
+    inline-size: variables.$size-e1;
+    aspect-ratio: 1;
+    border: 1px solid variables.$fc-s1;
+    border-radius: 50%;
+  }
+
+  input:focus-within {
+    appearance: auto;
+  }
 
   span {
     font-size: variables.$size-e1;
@@ -248,6 +260,5 @@ footer {
         text-align: center;
       }
     }
-  }
-  
+  } 
 }

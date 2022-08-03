@@ -209,6 +209,11 @@ body {
   background-color: hsl(0deg, 0%, 100%);
 }
 
+input,
+button {
+  accent-color: hsl(289deg, 100%, 72%);
+}
+
 /* mixin for the background */
 main {
   grid-template: "chat-app content" 125vh/1fr 1fr;
@@ -301,9 +306,6 @@ main .content h2, main .content p {
   border: none;
   border-radius: 50px;
 }
-.chat-box__input .input-message:focus-within {
-  outline: 2px solid hsl(289deg, 100%, 72%);
-}
 .chat-box__input .send-chat {
   position: absolute;
   top: 23%;
@@ -348,7 +350,18 @@ main .content h2, main .content p {
   padding: 0.5rem;
   color: hsl(0deg, 0%, 100%);
   background-image: linear-gradient(to right, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  border: none;
   border-radius: 10px 10px 10px 0;
+}
+.form-price label input {
+  appearance: none;
+  inline-size: 0.75rem;
+  aspect-ratio: 1;
+  border: 1px solid hsl(270deg, 20%, 96%);
+  border-radius: 50%;
+}
+.form-price label input:focus-within {
+  appearance: auto;
 }
 .form-price label span {
   font-size: 0.75rem;
