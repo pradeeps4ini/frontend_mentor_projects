@@ -43,6 +43,7 @@ main {
   .content {
     align-self: center;
     grid-area: content;
+    animation: moveLeft ease-in 3s 1;
 
     h2, p {
       max-inline-size: 60%;
@@ -66,6 +67,7 @@ main {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: scroll;
+  animation: moveRight ease-in 1.5s 1;
 
   &::-webkit-scrollbar {
     display: none;
@@ -261,4 +263,21 @@ footer {
       }
     }
   } 
+}
+
+
+@keyframes moveRight {
+  from  {
+    transform: translateX(-1000px);
+  } to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translateX(1000px);
+  } to {
+    transform: translateX(0);
+  }
 }

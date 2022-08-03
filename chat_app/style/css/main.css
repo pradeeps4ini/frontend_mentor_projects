@@ -236,6 +236,7 @@ main .chat::after {
 main .content {
   align-self: center;
   grid-area: content;
+  animation: moveLeft ease-in 3s 1;
 }
 main .content h2, main .content p {
   max-inline-size: 60%;
@@ -255,6 +256,7 @@ main .content h2, main .content p {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: scroll;
+  animation: moveRight ease-in 1.5s 1;
 }
 .chat-box::-webkit-scrollbar {
   display: none;
@@ -417,6 +419,22 @@ footer p {
     max-inline-size: 100%;
     margin-inline: auto;
     text-align: center;
+  }
+}
+@keyframes moveRight {
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes moveLeft {
+  from {
+    transform: translateX(1000px);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 
