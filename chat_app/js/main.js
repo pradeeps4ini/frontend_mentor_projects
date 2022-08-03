@@ -55,7 +55,7 @@ const domInteraction = (() => {
   const randomMessage = function() {
     
     const randIndex = randomNumber();
-    const chat = chats[randIndex];
+    const chat = autoChat[randIndex];
     return chat;
   };
 
