@@ -77,7 +77,7 @@ main {
     padding-inline: variables.$size1;
     padding-block: variables.$size3 variables.$size0;  
     margin-block-end: variables.$size-e1;
-    background-image: linear-gradient(to left, variables.$fc-grad0 10%, variables.$fc-grad1);
+    background-image: linear-gradient(to left, variables.$fc-grad1 10%, variables.$fc-grad0);
     border-radius: 25px 25px 10px 10px;
     
     &::before {

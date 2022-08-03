@@ -265,7 +265,7 @@ main .content h2, main .content p {
   padding-inline: 1rem;
   padding-block: 2rem 0.5rem;
   margin-block-end: 0.75rem;
-  background-image: linear-gradient(to left, hsl(293deg, 100%, 63%) 10%, hsl(264deg, 100%, 61%));
+  background-image: linear-gradient(to left, hsl(264deg, 100%, 61%) 10%, hsl(293deg, 100%, 63%));
   border-radius: 25px 25px 10px 10px;
 }
 .chat-box__header::before {
