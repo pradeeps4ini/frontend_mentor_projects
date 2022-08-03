@@ -209,8 +209,10 @@ body {
   background-color: hsl(0deg, 0%, 100%);
 }
 
+/* mixin for the background */
 main {
   grid-template: "chat-app content" 125vh/1fr 1fr;
+  gap: 5.5rem;
 }
 main .chat {
   position: relative;
@@ -238,13 +240,13 @@ main .content h2, main .content p {
   position: relative;
   top: 0;
   z-index: 1;
-  margin-inline: auto;
+  margin-inline: auto clamp(2rem, 4vh + 1rem, 5rem);
   max-inline-size: 16rem;
   block-size: 33.5rem;
   margin-block-start: 25vh;
   border: 0.5rem solid hsl(0deg, 0%, 100%);
   border-radius: 30px;
-  box-shadow: 1px 1px 3px 1px hsl(270deg, 7%, 64%), 1px 1px 5px 1px hsl(270deg, 7%, 64%);
+  box-shadow: 1px 1px 15px 1px hsl(270deg, 7%, 64%), 1px 1px 5px 1px hsl(270deg, 7%, 64%);
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: scroll;
@@ -364,9 +366,44 @@ footer p {
 }
 
 /* media queries */
-@media (max-width: 900px) {
+@media (max-width: 900px) and (min-width: 750px) {
   main {
-    grid-template: "chat-app" auto "content" auto/1fr;
+    gap: 0;
+  }
+  .content > * {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 749px) {
+  main {
+    grid-template: "chat-app" 680px "content" auto/1fr;
+    gap: 1.5rem;
+  }
+  main .chat::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -35%;
+    inline-size: 100%;
+    block-size: 75%;
+    background-image: linear-gradient(to left, hsl(264deg, 100%, 61%), hsl(293deg, 100%, 63%));
+    border-radius: 0 0 50% 50%;
+  }
+  main .chat .chat-box {
+    margin-inline: auto;
+    margin-block-start: 10vh;
+  }
+  main .content {
+    padding-inline: 3.5rem;
+  }
+  main .content #h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+  main .content #h2, main .content p {
+    max-inline-size: 100%;
+    margin-inline: auto;
+    text-align: center;
   }
 }
 
