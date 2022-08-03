@@ -384,8 +384,8 @@ footer p {
     position: absolute;
     top: 0;
     left: -35%;
-    inline-size: 100%;
-    block-size: 75%;
+    inline-size: 75%;
+    block-size: 100%;
     background-image: linear-gradient(to left, hsl(264deg, 100%, 61%), hsl(293deg, 100%, 63%));
     border-radius: 0 0 50% 50%;
   }

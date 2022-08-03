@@ -12,13 +12,13 @@ body {
 
 /* mixin for the background */
 
-@mixin after($block-size) {
+@mixin after($inline-size) {
   content: "";
   position: absolute;
   top: 0;
   left: -35%;
-  inline-size: 100%;
-  block-size: $block-size;
+  inline-size: $inline-size;
+  block-size: 100%;
   background-image: linear-gradient(to left, variables.$fc-grad1, variables.$fc-grad0);
   border-radius: 0 0 50% 50%;
 }
